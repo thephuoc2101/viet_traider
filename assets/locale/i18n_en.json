@@ -1,0 +1,17 @@
+{
+    "ui": {
+
+        "app_name": "eoffice",
+        "text_done": "Xong",
+        "text_ok": "OK",
+        "text_yes": "Được",
+        "text_no": "Không",
+        "text_continue": "Tiếp tục",
+        "text_error": "Lỗi",
+        "text_notification": "Thông báo",
+        "text_change_language": "Thay Đổi Ngôn Ngữ",
+
+        "error_no_data": "Không có dữ liệu!",
+        "error_something_went_wrong": "Có lỗi xảy ra!"
+    }
+}

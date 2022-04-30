@@ -1,0 +1,53 @@
+{
+  "ui": {
+
+    "app_name": "eoffice",
+    "text_done": "Xong",
+    "text_ok": "OK",
+    "text_yes": "Có",
+    "text_no": "Không",
+    "text_continue": "Tiếp tục",
+    "text_error": "Lỗi",
+    "text_notification": "Thông báo",
+    "text_change_language": "Thay Đổi Ngôn Ngữ",
+    "text_delete": "Xoá",
+    "text_edit": "Sửa",
+    "text_cancel": "Huỷ",
+    "text_confirm": "Xác nhận",
+
+    "mail_inbox": "Hộp thư đến",
+    "mail_sent": "Đã gửi",
+    "mail_draft": "Thư nháp",
+    "mail_trash": "Thùng rác",
+    "mail_all": "Toàn bộ thư",
+    "mail_confirm_delete": "Bạn có muốn xoá nhãn không?",
+
+    "schedule_general": "Chung",
+    "schedule_personal": "Cá nhân",
+    "schedule_department": "Phòng ban",
+    "schedule_recommend": "Đề xuất",
+    "schedule_basis": "Cơ sở",
+
+    "error_no_data": "Không có dữ liệu!",
+    "error_something_went_wrong": "Có lỗi xảy ra!",
+    "error_change_label": "Vui lòng chọn nhãn!",
+
+    "error_code_uc33": "SessionCode không đúng định dạng.",
+    "error_code_uc32": "User phải được kích hoạt trước khi đăng nhập vào hệ thống",
+    "error_code_uc24": "Password không chính xác",
+    "error_code_uc21": "User không tồn tại trong hệ thống",
+    "error_code_uc09": "NewPassword và ConfirmNewPassword không giống nhau.",
+    "error_code_uc01": "FirstName không vượt quá 100 ký tự",
+    "error_code_uc02": "LastName không vượt quá 500 ký tự",
+    "error_code_uc04": "Email không vượt quá 200 ký tự",
+    "error_code_uc05": "MobileNumber không vượt quá 50 ký tự",
+    "error_code_uc06": "Address không vượt quá 500 ký tự",
+    "error_code_uc10": "FirstName không được bỏ trống",
+    "error_code_uc11": "LastName không được bỏ trống",
+    "error_code_uc12": "UserName không được bỏ trống",
+    "error_code_uc13": "UserName không vượt quá 50 ký tự",
+    "error_code_uc08": "PhoneNumber không vượt quá 200 ký tự",
+    "error_code_uc27": "Avatar không vượt quá 200 ký tự 500"
+
+  }
+}
