@@ -35,7 +35,7 @@ void main() async {
           BlocProvider<UserCubit>.value(value: app.userCubit),
         ],
         child: MyApp(app: app),
-      ),
+      ), 
     ),
   );
 }

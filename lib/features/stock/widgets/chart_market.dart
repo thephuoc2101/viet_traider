@@ -39,18 +39,11 @@ class _ChartMarketState extends State<ChartMarket> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 70.0,
+      height: 40.0,
       width: double.infinity,
-      child: Padding(
-        padding:
-            const EdgeInsets.only(right: 18.0, left: 12.0, top: 24, bottom: 12),
-        // child: LineChart(
-        //   mainData(_dataChart),
-        // ),
-        child: _dataChart.isNotEmpty
-            ? _buildChart(_dataChart)
-            : const SizedBox.shrink(),
-      ),
+      child: _dataChart.isNotEmpty
+          ? _buildChart(_dataChart)
+          : const SizedBox.shrink(),
     );
   }
 

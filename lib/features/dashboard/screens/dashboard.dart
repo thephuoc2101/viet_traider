@@ -52,10 +52,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
   }
   @override
   Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(
-          title: const Text('BottomNavigationBar Sample'),
-        ),
-        body: _widgetOptions.elementAt(_selectedIndex),
+        body: SafeArea(child: _widgetOptions.elementAt(_selectedIndex)),
         bottomNavigationBar: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(

@@ -55,43 +55,41 @@ class _ItemMarketState extends State<ItemMarket> {
             }
           },
           orElse: () {});
-      return Container(
-        padding: const EdgeInsets.all(10.0),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10.0),
-          border: Border.all(width: 1.0, color: Colors.grey),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              cIndex.toString(),
-              style:
-                  const TextStyle(fontWeight: FontWeight.w500, fontSize: 17.0),
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(right: 12.0),
+            child: ChartMarket(
+              data: dataChart,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10.0),
-              child: ChartMarket(
-                data: dataChart,
-              ),
+          ),
+          const SizedBox(height: 6.0),
+          Text(
+            type.name,
+            style:
+                const TextStyle(fontWeight: FontWeight.bold, fontSize: 14.0),
+          ),
+          const SizedBox(height: 3.0),
+          Text(
+            cIndex.toString(),
+            style:
+                const TextStyle(fontWeight: FontWeight.w700, fontSize: 15.0),
+          ),
+          const SizedBox(height: 3.0),
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(4.0),
+              color: const Color(0xff00873C),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  type.name,
-                  style: const TextStyle(
-                      fontWeight: FontWeight.w500, fontSize: 14.0),
-                ),
-                Text(
-                  '${_getMark(cIndex, oIndex)}$_percent',
-                  style: const TextStyle(fontSize: 12.0),
-                )
-              ],
-            )
-          ],
-        ),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 10.0, vertical: 3.0),
+            child: Text(
+              '${_getMark(cIndex, oIndex)}$_percent',
+              style: const TextStyle(fontSize: 13.0, color: Colors.white),
+            ),
+          )
+        ],
       );
     });
   }

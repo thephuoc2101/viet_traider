@@ -16,6 +16,7 @@ class Exchanges extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
     return ListView.separated(
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
@@ -24,11 +25,13 @@ class Exchanges extends StatelessWidget {
             create: (_) =>
                 MarketCubit(RepositoryProvider.of<StockRepository>(context)),
             child: SizedBox(
-              width: 120.0,
+              width: width/data.length,
               child: GestureDetector(
                 onTap: () => pushNamed(AcadChartScreen.route, arguments: {
                   'sym':
-                      (MakerTypeEx.fromCode(item.mc ?? '') ?? MakerType.vnIndex).sym.toUpperCase()
+                      (MakerTypeEx.fromCode(item.mc ?? '') ?? MakerType.vnIndex)
+                          .sym
+                          .toUpperCase()
                 }),
                 child: ItemMarket(
                   item: item,
@@ -37,7 +40,7 @@ class Exchanges extends StatelessWidget {
             ),
           );
         },
-        separatorBuilder: (context, index) => const SizedBox(width: 10.0),
+        separatorBuilder: (context, index) => const SizedBox(width: 0.0),
         itemCount: data.length);
   }
 }
