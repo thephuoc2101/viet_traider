@@ -74,13 +74,13 @@ class _ItemMarketState extends State<ItemMarket> {
           Text(
             cIndex.toString(),
             style:
-                const TextStyle(fontWeight: FontWeight.w700, fontSize: 15.0),
+                 TextStyle(fontWeight: FontWeight.w700, fontSize: 15.0,color: _getColor(cIndex,oIndex)),
           ),
           const SizedBox(height: 3.0),
           Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(4.0),
-              color: const Color(0xff00873C),
+              color: _getColor(cIndex,oIndex),
             ),
             padding:
                 const EdgeInsets.symmetric(horizontal: 10.0, vertical: 3.0),
@@ -101,6 +101,15 @@ class _ItemMarketState extends State<ItemMarket> {
       return '-';
     } else {
       return '';
+    }
+  }
+  Color _getColor(num cIndex, num oIndex){
+    if ((cIndex) > (oIndex)) {
+      return Colors.green;
+    } else if ((cIndex) < (oIndex)) {
+      return Colors.red;
+    } else {
+      return Colors.amber;
     }
   }
 }

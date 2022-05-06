@@ -19,7 +19,7 @@ class UserCubit extends Cubit<UserState> {
     } catch (err) {
       if (err is DioError) {
         emit(UserError(
-          errors: err.toCodes(),
+
         ));
       } else {
         emit(const UserError(error: UI.error_something_went_wrong));
@@ -35,7 +35,7 @@ class UserCubit extends Cubit<UserState> {
       emit(const PasswordUpdated());
     } catch (err) {
       if (err is DioError) {
-        emit(UserError(errors: err.toMessages()));
+        // emit(UserError(errors: err.toMessages()));
       } else {
         emit(const UserError(errors: [UI.error_something_went_wrong]));
       }

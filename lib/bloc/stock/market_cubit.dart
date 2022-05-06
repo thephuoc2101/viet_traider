@@ -34,7 +34,7 @@ class MarketCubit extends Cubit<MarketState> {
   void _handleError(Object err) {
     if (err is DioError) {
       emit(MarketError(
-        errors: err.toCodes(),
+
       ));
     } else {
       emit(const MarketError(error: UI.error_something_went_wrong));
